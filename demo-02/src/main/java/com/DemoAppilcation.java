@@ -1,14 +1,16 @@
 package com;
 
+import com.config.StudentConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 /**
  * @SpringBootApplication
  * 声明 入口类 并且声明的springboot项目的
  */
 @SpringBootApplication
-//@EnableConfigurationProperties({StudentConfig.class})
+@EnableConfigurationProperties({StudentConfig.class})
 public class DemoAppilcation {
 
     public static void main(String[] args) {

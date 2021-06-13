@@ -1,7 +1,9 @@
 package com.config;
 
 
-//@ConfigurationProperties(prefix="student")
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+@ConfigurationProperties(prefix="student")
 public class StudentConfig {
     private String name;
     private Integer arg;
