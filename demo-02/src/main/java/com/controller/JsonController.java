@@ -26,20 +26,24 @@ public class JsonController {
     @Autowired
     private SaladConfig saladConfig;
 
-    @Value("${student.name}")
-    private String name;
-    @Value("${student.arg}")
-    private Integer arg;
+    @Value("${username}")
+    private String username;
+    @Value("${password}")
+    private Integer password;
 
     @RequestMapping("/json")
     public String json(){
         return "Hello JSON";
     }
 
+    @RequestMapping("/jasypt")
+    public String encryptor(){
+        return username+":"+password;
+    }
     @RequestMapping("/student")
     public Student student(){
 //        Student student = new Student(studentConfig.getName(),studentConfig.getArg());
-        return new Student(studentConfig.getName(),studentConfig.getArg());
+        return new Student(studentConfig.getName(),studentConfig.getArg(),studentConfig.getHobby());
     }
 
     @RequestMapping("/vegetables")

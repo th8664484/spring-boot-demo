@@ -1,0 +1,50 @@
+#server:
+#  port: 8090
+
+jasypt:
+  encryptor:
+    password: 123456!@#
+
+username: ENC(r5yM03g3J3yRLXmKHr/7Yg==)
+password: ENC(78G9378/Fr+3g7WO0TmRXQ==)
+
+#一 结构清晰
+student:
+  name: 张三
+  arg: 18
+  hobby:
+    - 音乐
+    - 游戏
+    - 美食
+
+#二 流式语法
+#student: { name: 张三, arg: 18}
+
+salad:
+  banana: 香蕉
+  apple: 苹果
+  watermelon: 西瓜
+
+vegetables:
+  potato: 土豆
+  eggplant: 茄子
+  greenpeper: 青椒
+
+spring:
+  profiles:
+    active: dev
+---
+#开发环境
+spring:
+  profiles: dev
+
+server:
+  port: 8090
+
+---
+#生产环境
+spring:
+  profiles: prod
+
+server:
+  port: 8010

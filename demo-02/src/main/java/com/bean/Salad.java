@@ -1,5 +1,10 @@
 package com.bean;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter@Setter
 public class Salad{
     private String banana;
     private String apple;
@@ -14,27 +19,4 @@ public class Salad{
         this.watermelon = watermelon;
     }
 
-    public String getBanana() {
-        return banana;
-    }
-
-    public void setBanana(String banana) {
-        this.banana = banana;
-    }
-
-    public String getApple() {
-        return apple;
-    }
-
-    public void setApple(String apple) {
-        this.apple = apple;
-    }
-
-    public String getWatermelon() {
-        return watermelon;
-    }
-
-    public void setWatermelon(String watermelon) {
-        this.watermelon = watermelon;
-    }
 }
