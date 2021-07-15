@@ -1,0 +1,4 @@
+第一种方式：@Mapper + mybatis-config.xml配置
+第二种方式：@Mapper + 弃用mybatis-config.xml配置，写到yml配置中
+第三种方式：@Mapper + 弃用mybatis配置  sql写到注解中
+第四种方式：spring-boot入口写Mapper扫描 + 弃用mybatis配置  sql写到注解中
