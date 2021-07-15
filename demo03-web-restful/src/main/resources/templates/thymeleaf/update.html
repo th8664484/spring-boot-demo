@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.css}">
+</head>
+</head>
+<body class="container">
+<h2>添加记录</h2>
+<form class="form-horizontal" th:action="@{/update}" method="post">
+    <input type="hidden" name="_method" value="put">
+    <div class="form-group">
+        <label  class="col-sm-2 control-label">姓名</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control"  name="name" th:value="${pers.name}" readonly>
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="col-sm-2 control-label">职位</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control"  name="position" th:value="${pers.position}">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit"  class="btn btn-default" value="提交">
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
